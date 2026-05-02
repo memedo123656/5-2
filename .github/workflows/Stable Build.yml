@@ -42,9 +42,6 @@ jobs:
         echo "GCC64_PATH=$GITHUB_WORKSPACE/gcc64" >> $GITHUB_ENV
         echo "GCC32_PATH=$GITHUB_WORKSPACE/gcc32" >> $GITHUB_ENV
 
-    - name: 📥 Clone kernelSU-Next
-      run: curl -LSs "https://raw.githubusercontent.com/Mr-Morat/KernelSU-Next/stable/kernel/setup.sh" | bash -s legacy_susfs
-      
     - name: 📅 Set BUILD DATE
       run: |
         echo "BUILD_DATE='\"$(TZ=Asia/Jakarta date '+%b %d %Y')\"'" >> $GITHUB_ENV
